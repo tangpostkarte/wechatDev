@@ -1,0 +1,13 @@
+<!--index.wxml-->
+<view>
+  <text>请输入第1个数字：</text>
+  <input type="number" bindinput="num1Input" />
+</view>
+<view>
+  <text>请输入第2个数字：</text>
+  <input type="number" bindinput="num2Input" />
+</view>
+<button bindtap="compare">比较</button>
+<view>
+  <text wx:if="{{ result }}">比较结果：{{ result }}</text>
+</view>

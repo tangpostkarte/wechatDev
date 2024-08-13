@@ -1,0 +1,29 @@
+<!--index.wxml-->
+<view wx:for="{{ arr }}" wx:key="*this">
+	{{ index }} {{ item }}
+</view>
+
+<view wx:for="{{ list }}" wx:key="id">
+{{ index }}-----{{ item.message }}======={{ item.id }}
+</view>
+
+<view wx:for="{{ list }}" wx:key="id" wx:for-item="item2" wx:for-index="index2">
+{{ index2 }}：{{ item2.message }}
+</view>
+
+<wxs module="m1">
+  function toUpper(str) {
+    return str.toUpperCase()
+  }
+  module.exports = {
+    toUpper: toUpper
+  }
+</wxs>
+<view>
+  {{ m1.toUpper('weixin') }}
+</view>
+
+<wxs module="m2" src="../../utils/tool.wxs"></wxs>
+<view>
+  {{ m2.message }}
+</view>

@@ -1,0 +1,8 @@
+<!--index.wxml-->
+<button bindtap="test">选择图片</button>
+
+<image src="{{ url }}" bindtap="previewImage"></image>
+
+<button bindtap="upload">上传</button>
+
+<button bindtap="download">下载</button>

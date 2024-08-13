@@ -1,0 +1,114 @@
+{
+    "code": 0,
+    "data": {
+      "othersList": [
+        {
+          "imgSrc": "http://127.0.0.1:3000/static/cover/1.jpg",
+          "duration": "00:06:28",
+          "title": "世界上最小的网站！小到只有0.4KB，你信么？",
+          "playMsg": "206",
+          "commentCount": " 445"
+        },
+      
+        {
+          "imgSrc": "http://127.0.0.1:3000/static/cover/3.png",
+          "duration": "00:01:39",
+          "title": "晚餐合集～ 越吃越想吃，喜欢的一定要试试！",
+          "playMsg": "270",
+          "commentCount": " 1179"
+        },
+        {
+          "imgSrc": "http://127.0.0.1:3000/static/cover/1.png",
+          "duration": "00:02:11",
+          "title": "改革春风吹满地",
+          "playMsg": "521",
+          "commentCount": " 564"
+        },
+        {
+          "imgSrc": "http://127.0.0.1:3000/static/cover/25.png",
+          "duration": "00:01:03",
+          "title": "当B站被腾讯收购！会发生什么？",
+          "playMsg": "1178",
+          "commentCount": " 4348"
+        },
+        {
+          "imgSrc": "http://127.0.0.1:3000/static/cover/29.png",
+          "duration": "00:01:01",
+          "title": "雷锋的故事里就这配音就值一个亿？？",
+          "playMsg": "1632",
+          "commentCount": " 4668"
+        },
+        {
+          "imgSrc": "http://127.0.0.1:3000/static/cover/26.png",
+          "duration": "00:03:53",
+          "title": "肯德基内部员工才知道，用这几句“暗语”点餐，能让你吃到撑！",
+          "playMsg": "277",
+          "commentCount": " 436"
+        },
+        {
+          "imgSrc": "http://127.0.0.1:3000/static/cover/9.jpg",
+          "duration": "00:00:41",
+          "title": "bilibili播放量最多的视频？！！",
+          "playMsg": "35",
+          "commentCount": " 246"
+        },
+        {
+          "imgSrc": "http://127.0.0.1:3000/static/cover/10.jpg",
+          "duration": "00:08:58",
+          "title": "淘宝上最侮辱智商的商品！真是花钱买了个教训",
+          "playMsg": "47",
+          "commentCount": " 363"
+        },
+        {
+          "imgSrc": "http://127.0.0.1:3000/static/cover/11.jpg",
+          "duration": "00:03:48",
+          "title": "男子醉驾被查扬言“我爷爷是搞原子弹的” 交警一查还真是",
+          "playMsg": "758",
+          "commentCount": " 931"
+        },
+        {
+          "imgSrc": "http://127.0.0.1:3000/static/cover/26.png",
+          "duration": "00:02:53",
+          "title": "春暖花开，与友人一起郊游吧！！！",
+          "playMsg": "2237",
+          "commentCount": " 3439"
+        },
+        {
+          "imgSrc": "http://127.0.0.1:3000/static/cover/14.jpg",
+          "duration": "00:01:59",
+          "title": "为什么明明声音已经关掉却还能听到声音？？？",
+          "playMsg": "578",
+          "commentCount": " 1099"
+        },
+        {
+          "imgSrc": "http://127.0.0.1:3000/static/cover/15.jpg",
+          "duration": "00:15:31",
+          "title": "不小心受伤怎么办？教你23个生活的必备技巧@油兔不二字幕组",
+          "playMsg": "1188",
+          "commentCount": " 3425"
+        },
+        {
+          "imgSrc": "http://127.0.0.1:3000/static/cover/1.jpg",
+          "duration": "00:06:28",
+          "title": "世界上最小的网站！小到只有0.4KB，你信么？",
+          "playMsg": "206",
+          "commentCount": " 445"
+        },
+      
+        {
+          "imgSrc": "http://127.0.0.1:3000/static/cover/3.png",
+          "duration": "00:01:39",
+          "title": "晚餐合集～ 越吃越想吃，喜欢的一定要试试！",
+          "playMsg": "270",
+          "commentCount": " 1179"
+        },
+        {
+          "imgSrc": "http://127.0.0.1:3000/static/cover/1.png",
+          "duration": "00:02:11",
+          "title": "改革春风吹满地",
+          "playMsg": "521",
+          "commentCount": " 564"
+        }
+      ]
+    }
+  }

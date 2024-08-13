@@ -1,0 +1,55 @@
+﻿<!--pages/order/checkout/checkout.wxml-->
+<view class="content">
+  <!-- 标题 -->
+  <view class="content-title">请确认您的订单</view>
+  <!-- 订单信息-->
+  <view class="order">
+    <view class="order-title">订单详情</view>
+    <view class="order-list">
+      <!-- 订单商品列表项 -->
+      <view class="order-item" wx:for="{{ order_food }}" wx:key="id">
+        <view class="order-item-left">
+          <image class="order-item-image" mode="widthFix" src="{{ item.image_url }}" />
+          <view>
+            <view class="order-item-name">{{ item.name }}</view>
+            <view class="order-item-number">x {{ item.number }}</view>
+          </view>
+        </view>
+        <view class="order-item-price">{{ priceFormat(item.price * item.number) }}</view>
+      </view>
+      <!-- 满减信息 -->
+      <view class="order-item" wx:if="{{ checkPromotion(promotion) }}">
+        <view class="order-item-left">
+          <i class="order-promotion-icon">减</i>满减优惠
+        </view>
+        <view class="order-promotion-price">- {{ priceFormat(promotion) }}</view>
+      </view>
+      <!-- 小计 -->
+      <view class="order-item">
+        <view class="order-item-left">小计</view>
+        <view class="order-total-price">{{ priceFormat(price) }}</view>
+      </view>
+    </view>
+  </view>
+  <!-- 备注功能 -->
+  <view class="content-comment">
+    <label>备注</label>
+    <textarea placeholder="如有其他要求，请输入备注" bindinput="inputComment"></textarea>
+  </view>
+</view>
+<!-- 支付功能 -->
+<view class="operate">
+  <view class="operate-info">合计：{{ priceFormat(price) }}</view>
+  <view class="operate-submit" bindtap="pay">去支付</view>
+</view>
+<!-- 处理商品价格格式 -->
+<wxs module="priceFormat">
+  module.exports = function (price) {
+    return price ? '¥ ' + parseFloat(price) : ''
+  }
+</wxs>
+<wxs module="checkPromotion">
+  module.exports = function (promotion) {
+    return parseFloat(promotion) > 0
+  }
+</wxs>

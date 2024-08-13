@@ -1,0 +1,3 @@
+1、安装Node.js
+2、地址栏输入cmd，打开命令行
+3、执行node index.js

@@ -1,0 +1,65 @@
+{layout name="common/layout" /}
+<div class="main-category">
+  <div class="main-title">
+    <h2>分类管理</h2>
+  </div>
+  {include file="common/alert" /}
+  <div class="main-section">
+    <form method="post">
+      <table class="table table-striped table-bordered table-hover" style="max-width:600px;">
+        <thead>
+          <tr>
+            <th width="55">序号</th>
+            <th>名称</th>
+            <th width="100">操作</th>
+          </tr>
+        </thead>
+        <tbody>
+          {foreach $category as $v}
+          <tr>
+            <td><input type="text" class="form-control" maxlength="5" name="sort[{$v.id}]" value="{$v.sort}" style="height:25px;font-size:12px;padding:0 5px;"></td>
+            <td><a href="{:url('Food/index', ['category_id' => $v.id])}">{$v.name}</a></td>
+            <td>
+              <a href="{:url('Category/edit', ['id' => $v.id])}" style="margin-right:3px;">编辑</a>
+              <a href="{:url()}" class="js-del" data-id="{$v.id}" style="color:#C13932">删除</a>
+            </td>
+          </tr>
+          {/foreach}
+          {if $category->isEmpty()}
+          <tr><td colspan="3" class="text-center">还没有添加分类</td></tr>
+          {/if}
+        </tbody>
+      </table>
+      <input type="hidden" name="action" value="sort">
+      <input type="submit" value="改变排序" class="btn btn-success">{:token()}
+    </form>
+    <div class="main-section">
+      <form method="post">
+        <ul class="form-group form-inline">
+          <li>
+            <input type="text" class="form-control" maxlength="5" style="width:50px;" name="sort">
+            <label>序号</label>
+          </li>
+          <li>
+            <input type="text" class="form-control" name="name" required>
+            <label>名称</label>
+          </li>
+          <li>
+            <input type="hidden" name="action" value="add">
+            <input type="submit" value="添加新分类" class="btn btn-primary">{:token()}
+          </li>
+        </ul>
+      </form>
+    </div>
+  </div>
+</div>
+<script>
+  $('.js-del').click(function () {
+    if (confirm('你确定要删除该分类吗？')) {
+      var url = $(this).attr('href');
+      var id = $(this).attr('data-id');
+      Common.form(url, { action: 'del', id: id }).append('{:token()}').submit();
+    }
+    return false;
+  });
+</script>

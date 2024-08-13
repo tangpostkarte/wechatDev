@@ -1,0 +1,14 @@
+{
+    "code": 0,
+    "data": {
+      "videoInfo": {
+        "id": 2,
+        "videoSrc": "http://127.0.0.1:3000/static/video/02.mp4",
+        "videoTitle": "迈克尔杰克逊封神的12秒，无人能做到",
+        "author": "牧草君3",
+        "playCount": "24.9万",
+        "commentCount": 1345,
+        "date": "12-15"
+      }
+    }
+  }

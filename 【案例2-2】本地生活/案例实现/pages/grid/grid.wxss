@@ -1,0 +1,45 @@
+/* pages/grid/grid.wxss */
+/* 轮播图区域的样式 */
+swiper {
+  height: 350rpx;
+}
+swiper image {
+  width: 100%;
+  height: 100%;
+}
+/* 九宫格区域的样式 */
+.grids {
+  display: flex;
+  flex-wrap: wrap;
+}
+/* 九宫格区域中每一个格子的样式 */
+.grids .item {
+  width: 250rpx;
+  height: 250rpx;
+  border-right: 1rpx solid #eee;
+  border-bottom: 1rpx solid #eee;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.grids .item:nth-child(3) {
+  border-right: 0;
+}
+.grids .item:nth-child(6) {
+  border-right: 0;
+}
+.grids .item:nth-child(9) {
+  border-right: 0;
+}
+/* 九宫格区域中每一个格子中的图片和文字的样式 */
+.grids .item image {
+  width: 70rpx;
+  height: 70rpx;
+}
+.grids .item text {
+  color: #999;
+  font-size: 28rpx;
+  margin-top: 20rpx;
+}

@@ -1,0 +1,8 @@
+/**app.wxss**/
+/* 定义公共样式 */
+page {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-sizing: border-box;
+}

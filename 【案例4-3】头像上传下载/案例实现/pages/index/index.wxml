@@ -1,0 +1,7 @@
+<!--index.wxml-->
+<view class="imgbox">
+  <image src="{{ imgUrl }}" mode="aspectFit" />
+  <button type="primary" size="mini" bindtap="changeImg">更改头像</button>
+  <button type="primary" size="mini" bindtap="upload">头像上传</button>
+  <button type="primary" size="mini" bindtap="download">头像下载</button>
+</view>

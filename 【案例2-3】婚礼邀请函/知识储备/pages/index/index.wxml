@@ -1,0 +1,26 @@
+<!--index.wxml-->
+<video src="http://localhost:3000/1.mp4" loop="true"></video>
+
+<form>表单</form>
+
+<button>按钮</button>
+
+<button>普通按钮</button>
+<button type="primary">主色调按钮</button>
+<button type="warn">警告按钮</button>
+
+<input />
+
+<input type="text" />
+<input type="number" />
+
+<checkbox-group>
+  <checkbox>蛋糕</checkbox>
+  <checkbox>甜甜圈</checkbox>
+  <checkbox>巧克力</checkbox>
+</checkbox-group>
+
+<radio-group>
+  <radio>男</radio>
+  <radio>女</radio>
+</radio-group>

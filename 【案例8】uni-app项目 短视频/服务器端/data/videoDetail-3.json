@@ -1,0 +1,14 @@
+{
+    "code": 0,
+    "data": {
+      "videoInfo": {
+        "id": 3,
+        "videoSrc": "http://127.0.0.1:3000/static/video/03.mp4",
+        "videoTitle": "【歌单】安静轻音：触手可及的治愈旋律",
+        "author": "牧草君",
+        "playCount": "24.9万",
+        "commentCount": 1345,
+        "date": "12-15"
+      }
+    }
+  }

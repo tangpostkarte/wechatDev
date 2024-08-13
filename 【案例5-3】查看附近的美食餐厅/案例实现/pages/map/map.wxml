@@ -1,0 +1,6 @@
+<!--pages/map/map.wxml-->
+<map id="myMap" bindcontroltap="controlTap" bindregionchange="regionChange" longitude="{{ longitude }}" latitude="{{ latitude }}" markers="{{ markers }}" scale="{{ scale }}" show-location></map>
+<view class="controls">
+  <image class="banner" mode="widthFix" src="/images/banner.png" bindtap="bannerTap" />
+  <image class="gps" src="/images/gps.png" bindtap="controlTap" />
+</view>

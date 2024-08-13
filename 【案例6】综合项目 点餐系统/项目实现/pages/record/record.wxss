@@ -1,0 +1,52 @@
+/* pages/record/record.wxss */
+page {
+  background-color: #f8f8f8;
+  font-size: 32rpx;
+}
+.head {
+  width: 100%;
+  background-color: #f7982a;
+  height: 400rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.avatar-wrapper {
+  width: 160rpx;
+  height: 160rpx;
+  padding: 0;
+  background: none;
+  border-radius: 50%;
+}
+.avatar {
+  width: 160rpx;
+  height: 160rpx;
+  border-radius: 50%;
+}
+/* 列表部分 */
+.list-title {
+  background-color: #fff;
+  padding: 16rpx 0;
+  text-align: center;
+}
+.list-item {
+  display: flex;
+  padding: 42rpx 20rpx;
+  border-bottom: 1rpx solid #ececec;
+}
+.list-item-l {
+  flex: 1;
+}
+.list-item-r {
+  line-height: 76rpx;
+}
+.list-item-r > text {
+  color: #f7982a;
+  font-weight: 600;
+  font-size: 32rpx;
+}
+.list-item-time {
+  margin-top: 10rpx;
+  font-size: 26rpx;
+  color: #999;
+}

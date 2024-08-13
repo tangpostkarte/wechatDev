@@ -1,0 +1,36 @@
+<!--index.wxml-->
+<!-- “邀请函”页面的背景图片 -->
+<image class="bg" src="/images/bg_1.png"></image>
+<!-- 内容区域的整体结构 -->
+<view class="content">
+  <!-- 顶部图片 -->
+  <image class="content-gif" src="/images/save_the_date.gif"></image>
+  <!-- 标题 -->
+  <view class="content-title">邀请函</view>
+  <!-- 合照 -->
+  <view class="content-avatar">
+    <image src="/images/avatar.png"></image>
+  </view>
+  <!-- 新郎和新娘的名字 -->
+  <view class="content-info">
+    <view class="content-name">
+      <image src="/images/tel.png"></image>
+      <view>王辉辉</view>
+      <view>新郎</view>
+    </view>
+    <view class="content-wedding">
+      <image src="/images/wedding.png"></image>
+    </view>
+    <view class="content-name">
+      <image src="/images/tel.png"></image>
+      <view>张琳琳</view>
+      <view>新娘</view>
+    </view>
+  </view>
+  <!-- 婚礼信息 -->
+  <view class="content-address">
+    <view>我们诚邀您来参加我们的婚礼</view>
+    <view>时间：2022年1月28日</view>
+    <view>地点：北京市海淀区XX路XX酒店</view>
+  </view>
+</view>

@@ -1,0 +1,14 @@
+{
+  "code": 0,
+  "data": {
+    "videoInfo": {
+      "id": 1,
+      "videoSrc": "http://127.0.0.1:3000/static/video/01.mp4",
+      "videoTitle": "【圣地亚哥金曲】藏，超好听的中国风电音鬼畜！",
+      "author": "牧草君2",
+      "playCount": "24.9万",
+      "commentCount": 1345,
+      "date": "12-15"
+    }
+  }
+}

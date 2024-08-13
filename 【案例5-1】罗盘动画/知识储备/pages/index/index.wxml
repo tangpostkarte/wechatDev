@@ -1,0 +1,3 @@
+<!--index.wxml-->
+<view animation="{{ move }}">hello world</view>
+<button bindtap="translate">动画</button>

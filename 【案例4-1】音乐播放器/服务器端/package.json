@@ -1,0 +1,16 @@
+{
+  "name": "music",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.1",
+    "multiparty": "^4.2.1",
+    "serve-index": "^1.9.1"
+  }
+}

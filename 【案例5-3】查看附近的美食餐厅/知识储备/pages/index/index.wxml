@@ -1,0 +1,4 @@
+<!--index.wxml-->
+<map id="myMap" markers="{{ markers }}" scale="3"></map>
+
+<button bindtap="navigateTo">路由</button>

@@ -1,0 +1,72 @@
+{layout name="common/layout" /}
+<div class="main-food">
+  {include file="common/alert" /}
+  <ul class="nav nav-tabs" role="tablist">
+    <li role="presentation" class="{if !$param.recycle}active{/if}"><a href="{:url('', ['recycle' => 0])}">商品管理</a></li>
+    <li role="presentation" class="{if $param.recycle}active{/if}"><a href="{:url('', ['recycle' => 1])}">回收站</a></li>
+  </ul>
+  <div class="main-section">
+    <div class="pull-left form-inline">
+      <select id="btn_category" style="width:120px;" class="form-control">
+        <option value="{:url('', array_merge($param, ['category_id' => 0, 'page' => 1]))}">所有分类</option>
+        {foreach $category as $v}
+        <option value="{:url('', array_merge($param, ['category_id' => $v.id, 'page' => 1]))}" {if $param.category_id === $v.id}selected{/if}>{$v.name}</option>
+        {/foreach}
+      </select>
+      <form action="" class="input-group" style="width:200px;margin:0 10px;">
+        <input type="text" class="form-control" name="search" value="{$param.search}" placeholder="输入商品名">
+        <span class="input-group-btn">
+          <input type="hidden" name="category_id" value="{$param['category_id']}">
+          <input type="hidden" name="recycle" value="{$param['recycle']}">
+          <input type="submit" class="btn btn-default" value="搜索">
+        </span>
+      </form>
+      {if $param.search !== ''}<a href="{:url()}">清除条件</a></span>{/if}
+    </div>
+  </div>
+  <div class="main-section">
+    <table class="table table-striped table-bordered table-hover">
+      <thead>
+        <tr>
+          <th>标题</th>
+          <th width="146">分类</th>
+          <th width="130">创建时间</th>
+          <th width="130">更新时间</th>
+          <th width="50">状态</th>
+          <th width="100">操作</th>
+        </tr>
+      </thead>
+      <tbody>
+        {foreach $food as $v}
+        <tr>
+          <td><a href="{:url('Food/edit', ['id' => $v.id])}">{$v.name}</a></td>
+          <td><a href="{:url('', array_merge($param, ['category_id' => $v.category_id, 'page' => 1]))}">{$v.category.name?:'未分类'}</a></td>
+          <td><small>{$v.create_time}</small></td>
+          <td><small>{$v.update_time}</small></td>
+          <td>{switch $v.status}{case 0}下架{/case}{case 1}上架{/case}{case 2}删除{/case}{/switch}</td>
+          <td><a href="{:url('Food/edit', ['id' => $v.id])}" style="margin-right:7px;">编辑</a><a href="{:url('', $param)}" style="color:#C13932" href="#" class="js-del" data-id="{$v.id}">删除</a></td>
+        </tr>
+        {/foreach}
+        {if $food->isEmpty()}
+        <tr><td colspan="6" class="text-center">列表为空</td></tr>
+        {/if}
+      </tbody>
+    </table>
+  </div>
+  <div class="main-section">
+    {$food|raw}
+  </div>
+</div>
+<script>
+  $('#btn_category').change(function() {
+    location.href = $(this).val();
+  });
+  $('.js-del').click(function() {
+    var id = $(this).attr('data-id');
+    var url = $(this).attr('href');
+    if (confirm('您确定要删除此商品？')) {
+      Common.form(url, {id: id, action: 'del'}).append('{:token()}').submit();
+    }
+    return false;
+  });
+</script>

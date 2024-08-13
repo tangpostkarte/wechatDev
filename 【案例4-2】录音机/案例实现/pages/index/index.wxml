@@ -1,0 +1,10 @@
+<!--index.wxml-->
+<view class="top">
+  <view class="top-title">录音机</view>
+  <view class="top-time">{{ time }}</view>
+</view>
+<view class="control">
+  <view class="btn btn-play" bindtap="play" hover-class="btn-hover" hover-stay-time="50"></view>
+  <view class="btn btn-rec {{ state ===  1 ? 'btn-rec-pause' : 'btn-rec-normal' }}" bindtap="rec" hover-class="btn-hover" hover-stay-time="50"></view>
+  <view class="btn btn-stop" bindtap="stop" hover-class="btn-hover" hover-stay-time="50"></view>
+</view>

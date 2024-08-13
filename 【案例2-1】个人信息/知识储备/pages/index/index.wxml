@@ -1,0 +1,14 @@
+<!--index.wxml-->
+<view>view组件</view>
+
+<view hover-class="bold">手指按下后我会发生变化哦~</view>
+
+<view hover-start-time="1000" hover-class="bold">1秒后出状态</view>
+
+<view hover-stay-time="3000" hover-class="bold">我能点亮3秒钟</view>
+
+<image src="/images/demo01.jpg" mode="aspectFit" style="width: 200px;height: 195px;border: 1px solid black;"></image>
+
+<image src="/images/demo02.jpg" mode="top" style="width: 300px;height: 240px;"></image>
+
+<view class="name">view组件</view>

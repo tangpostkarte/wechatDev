@@ -1,0 +1,47 @@
+{layout name="common/layout" /}
+<div class="main-setting">
+  <div class="main-title"><h2>设置</h2></div>
+  {include file='common/alert' /}
+  <form method="post">
+    <div class="form-group main-form">
+      <ul>
+        <li><b>微信接口</b></li>
+        <li>
+          <label>AppID</label>
+          <input type="text" maxlength="200" style="width:265px;" class="form-control" name="appid" value="{$appid}" required />
+        </li>
+        <li>
+          <label>AppSecret</label>
+          <input type="password" maxlength="200" style="width:265px;" class="form-control" name="appsecret" value="{$appsecret}" required />
+        </li>
+        <li><b>促销</b></li>
+        <li class="form-inline">
+          {foreach $promotion as $k => $v}
+          满 <input type="text" maxlength="4" style="width:60px;" class="form-control" name="promotion[{$k}][k]" value="{$v.k}" required />
+          减 <input type="text" maxlength="4" style="width:60px;" class="form-control" name="promotion[{$k}][v]" value="{$v.v}" required />
+          {/foreach}
+        </li>
+        <li><b>轮播图</b></li>
+        <li>
+          {foreach $img_swiper as $v}
+          <input type="text" style="width:380px;" class="form-control" name="img_swiper[]" value="{$v}" />
+          <img src="{$v}" style="width:200px;border:1px solid #ccc;margin:5px 0">
+          {/foreach}
+        </li>
+        <li><b>广告图</b></li>
+        <li>
+          <input type="text" style="width:380px;" class="form-control" name="img_ad" value="{$img_ad}" />
+          <img src="{$img_ad}" style="width:200px;border:1px solid #ccc;margin:5px 0">
+        </li>
+        <li><b>分类图</b></li>
+        <li>
+          {foreach $img_category as $v}
+          <input type="text" style="width:380px;" class="form-control" name="img_category[]" value="{$v}" />
+          <img src="{$v}" style="width:200px;border:1px solid #ccc;margin:5px 0">
+          {/foreach}
+        </li>
+        <li><input type="submit" class="btn btn-primary" value="保存设置" />{:token()}</li>
+      </ul>
+    </div>
+  </form>
+</div>

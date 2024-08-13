@@ -1,0 +1,4 @@
+.name {
+  padding: 5px;
+  color: red
+}

@@ -1,0 +1,42 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/guest/guest",
+    "pages/video/video",
+    "pages/picture/picture"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#ff4c91",
+    "navigationBarTextStyle": "white"
+  },  
+  "tabBar": {
+    "color": "#ccc",
+    "selectedColor": "#ff4c91",
+    "borderStyle": "white",
+    "backgroundColor": "#fff",
+    "list": [{
+      "pagePath": "pages/index/index",
+      "iconPath": "images/invite.png",
+      "selectedIconPath": "images/invite.png",
+      "text": "邀请函"
+    }, {
+      "pagePath": "pages/picture/picture",
+      "iconPath": "images/marry.png",
+      "selectedIconPath": "images/marry.png",
+      "text": "照片"
+    }, {
+      "pagePath": "pages/video/video",
+      "iconPath": "images/video.png",
+      "selectedIconPath": "images/video.png",
+      "text": "美好时光"
+    }, {
+      "pagePath": "pages/guest/guest",
+      "iconPath": "images/guest.png",
+      "selectedIconPath": "images/guest.png",
+      "text": "宾客信息"
+    }]
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

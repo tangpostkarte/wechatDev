@@ -1,0 +1,189 @@
+{layout name="common/layout" /}
+<div class="main-food">
+  <div class="main-title">
+    <h2>编辑商品</h2>
+  </div>
+  {include file="common/alert" /}
+  <form method="post" id="edit_form">
+    <div class="form-group main-form">
+      <ul>
+        <li>
+          <label>分类</label>
+          <select id="btn_category" style="width:120px;" class="form-control" name="category_id">
+            <option value="0">未分类</option>
+            {foreach $category as $v}
+            <option value="{$v.id}" {if $food.category_id===$v.id}selected{/if}>{$v.name}</option>
+            {/foreach}
+          </select>
+        </li>
+        <li>
+          <label>商品名称</label>
+          <input type="text" maxlength="200" style="width:265px;" class="form-control" name="name" value="{$food.name}" required />
+        </li>
+        <li>
+          <label>商品价格</label>
+          <input type="text" maxlength="200" style="width:100px;" class="form-control" name="price" value="{$food.price}" required />
+        </li>
+        <li id="test">
+          <label>商品图片</label>
+          <div class="upload-pic">
+            <div class="webuploader-list"></div>
+            <div class="webuploader-file-picker">选择图片</div>
+          </div>
+        </li>
+        <li>
+          <div class="checkbox">
+          <label><input type="checkbox" name="status" value="1" {if $food.status}checked{/if}>是否上架</label>
+          </div>
+        </li>
+        <li>
+          <input type="hidden" name="id" value="{$id}">
+          {if $id}
+          <input type="submit" class="btn btn-primary" value="保存商品" />{:token()}
+          <a href="{:url('Food/index')}" class="btn btn-default">返回列表</a>
+          {else}
+            <input type="submit" class="btn btn-primary" value="发布商品" />{:token()}
+          {/if}
+        </li>
+      </ul>
+    </div>
+  </form>
+</div>
+<script>
+  var Config = {
+    saveUrl: "{:url('Upload/save')}",
+    deleteUrl: "{:url('Upload/delete')}",
+    token: '{$Request.token}'
+  };
+  $('#edit_form').submit(function() {
+    $(this).find('input[name=__token__]').val(Config.token);
+  });
+  Common.load({
+    css: [
+      '/static/css/webuploader/webuploader.css'
+    ],
+    js: [
+      '/static/webuploader/0.1.5/webuploader.html5only.min.js'
+    ]
+  }, function() {
+
+    var obj = $('#test');
+    var id = {$id};
+    var url = '/static/uploads/';
+    createImage({pic: '{$food.image_url}'});
+
+    function createImage(image) {
+      var pic = imagesUploader(obj.find('.upload-pic'), 'image_url', 1);
+      // 向列表中添加的图片
+      if (image.pic !== '') {
+        var picList = obj.find('.upload-pic .webuploader-list');
+        var item = fileItem(false, false, url + image.pic);
+        picList.append(item);
+        fileControl(item, image.pic);
+      }
+      function updateId(relation_id) {
+        function replace(obj) {
+          obj.server = obj.server.replace('&relation_id=0', '&relation_id=' + id);
+        }
+        id = relation_id;
+        replace(pic.options);
+        $('#edit_form input[name=id]').val(id);
+      }
+      function fileItem(fid, name, src) {
+        var item = $('<div class="webuploader-file-item webuploader-thumbnail"><img></div>');
+        fid && item.attr('id', fid);
+        name && item.append('<div class="webuploader-info">' + name + '</div>');
+        src && item.find('img').attr('src', src);
+        return item;
+      }
+      function fileControl(obj, path) {
+          obj.append('<div class="webuploader-opt"><span class="webuploader-del">[删除]</span></div>');
+          obj.append('<input class="webuploader-url" type="hidden" value="' + path + '">');
+      }
+      function imagesUploader(obj, name, max) {
+        var picker_id = name + '_picker_' + id;
+        obj.find('.webuploader-file-picker').attr('id', picker_id);
+        var url = Config.saveUrl + '?type=images&name=' + name + '&relation=food&relation_id=' + id + '&_ajax=1';
+        var uploader = WebUploader.create({
+          auto: true,             // 选完文件后，是否自动上传
+          server: url,            // 文件接收服务端
+          pick: '#' + picker_id,  // 选择文件的按钮
+          fileVal: name,          // 上传的name
+          duplicate: true,        // 允许重复上传同一张图片
+          accept: {              // 只允许选择图片文件
+            title: 'Images',
+            extensions: 'gif,jpg,jpeg,bmp,png',
+            mimeTypes: 'image/*'
+          },
+          formData: {__token__: Config.token}
+        });
+        obj.find('.webuploader-list').on('click', '.webuploader-del', function () {
+          var pObj = $(this).parents('.webuploader-file-item');
+          if (confirm('您确定要立即删除此图片？')) {
+            $.ajax({
+              type: 'POST',
+              url: Config.deleteUrl + '?relation=food&relation_id=' + id,
+              data: {name: name, __token__: Config.token},
+              success: function(res) {
+                Config.token = res.data.__token__;
+                uploader.options.formData.__token__ = res.data.__token__;
+                pObj.remove();
+              }
+            });
+          }
+        });
+        // 当有文件添加时，判断文件数量，
+        uploader.on('beforeFileQueued', function () {
+          if (obj.find('.webuploader-url').length >= max) {
+            alert('操作失败，最多只能上传' + max + '张图片！');
+            return false;
+          }
+        });
+        // 当有文件添加后，显示预览图
+        uploader.on('fileQueued', function (file) {
+          var li = fileItem(file.id, file.name);
+          var img = li.find('img');
+          obj.find('.webuploader-list').append(li);
+          uploader.makeThumb(file, function (error, src) {
+            if (error) {
+              img.replaceWith('<span class="webuploader-tip">不能预览</span>');
+              return;
+            }
+            img.attr('src', src);
+          }, 100, 100);
+        });
+        // 上传过程中创建进度条显示进度
+        uploader.on('uploadProgress', function (file, percentage) {
+          var li = $('#' + file.id);
+          var percent = li.find('.webuploader-progress span');
+          if (!percent.length) {
+            percent = $('<p class="webuploader-progress"><span></span></p>').appendTo(li).find('span');
+          }
+          percent.css('width', percentage * 100 + '%');
+        });
+        // 上传成功
+        uploader.on('uploadSuccess', function (file, response) {
+          var li = $('#' + file.id);
+          if (!li.find('.webuploader-done').length) {
+            id === 0 && updateId(response.data.relation_id);
+            fileControl(li, response.data.path);
+            Config.token = response.data.__token__;
+          }
+        });
+        // 上传失败，显示错误提示
+        uploader.on('uploadError', function (file) {
+          var li = $('#' + file.id);
+          var error = li.find('div.webuploader-error');
+          if (!error.length) {
+            error = $('<div class="webuploader-error">上传失败</div>').appendTo(li);
+          }
+        });
+        // 上传完成，删除进度条
+        uploader.on('uploadComplete', function (file) {
+          $('#' + file.id).find('.webuploader-progress').remove();
+        });
+        return uploader;
+      }
+    }
+  });
+</script>

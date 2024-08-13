@@ -1,0 +1,35 @@
+{layout name="common/layout" /}
+<div class="main-user">
+  <div class="main-title"><h2>客户管理</h2></div>
+  {include file="common/alert" /}
+  <div class="main-section">
+      <table class="table table-striped table-bordered table-hover" style="max-width:600px;">
+        <thead>
+          <tr>
+            <th width="100">客户编号</th>
+            <th width="130">消费金额</th>
+            <th width="130">注册时间</th>
+            <th width="130">操作</th>
+          </tr>
+        </thead>
+        <tbody>
+          {foreach $user as $v}
+          <tr>
+            <td>{$v.id}</td>
+            <td>¥{:floatval($v.price)}</td>
+            <td><small>{$v.create_time}</small></td>
+            <td>
+              <a href="{:url('Order/index', ['user_id' => $v.id])}">查看订单</a>
+            </td>
+          </tr>
+          {/foreach}
+          {if $user->isEmpty()}
+          <tr><td colspan="7" class="text-center">列表为空</td></tr>
+          {/if}
+        </tbody>
+      </table>
+    </div>
+    <div class="main-section">
+      {$user|raw}
+    </div>
+</div>

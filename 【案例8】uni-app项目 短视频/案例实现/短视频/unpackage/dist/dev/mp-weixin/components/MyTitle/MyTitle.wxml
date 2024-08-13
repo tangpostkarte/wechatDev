@@ -1,0 +1,1 @@
+<view class="my-title"><navigator class="logo"><image class="logo-img" src="../../static/logo.png"></image></navigator><view class="search-icon"><image src="../../static/search.jpg"></image></view><view class="user-icon"><image src="../../static/user.jpg"></image></view><view class="down-app">下载APP</view></view>

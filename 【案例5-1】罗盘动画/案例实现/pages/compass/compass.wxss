@@ -1,0 +1,45 @@
+/* pages/compass/compass.wxss */
+page {
+  background: #f1f1f1;
+}
+
+.anim-pic {
+  width: 400rpx;
+  height: 400rpx;
+  margin: 40rpx auto;
+}
+
+.anim-pic image {
+  width: 400rpx;
+  height: 400rpx;
+}
+
+.anim-btns {
+  padding: 20rpx 10rpx;
+  border-top: 1px solid #ccc;
+  display: flex;
+  flex-grow: 1;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+  height: 600rpx;
+}
+
+.anim-btns button {
+  background: #fff;
+  width: 160rpx;
+  margin: 10rpx auto;
+  height: 100rpx;
+  font-weight: normal;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.anim-btns button.btn-reset {
+  width: 610rpx;
+}
+
+.anim-btns button.btn-two {
+  width: 300rpx;
+  font-size: 16px;
+}

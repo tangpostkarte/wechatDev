@@ -1,0 +1,49 @@
+<!--pages/grid/grid.wxml-->
+<!--轮播图区域的结构 -->
+<swiper indicator-dots="true" autoplay="true" interval="3000">
+  <swiper-item>
+    <image src="/images/swiper01.jpg"></image>
+  </swiper-item>
+  <swiper-item>
+    <image src="/images/swiper02.jpg"></image>
+  </swiper-item>
+</swiper>
+<!-- 九宫格区域的结构 -->
+<view class="grids">
+  <view class="item">
+    <image src="/images/shi.png"></image>
+    <text>美食</text>
+  </view>
+  <view class="item">
+    <image src="/images/xiu.png"></image>
+    <text>装修</text>
+  </view>
+  <view class="item">
+    <image src="/images/yu.png"></image>
+    <text>洗浴</text>
+  </view>
+  <view class="item">
+    <image src="/images/che.png"></image>
+    <text>汽车</text>
+  </view>
+  <view class="item">
+    <image src="/images/chang.png"></image>
+    <text>唱歌</text>
+  </view>
+  <view class="item">
+    <image src="/images/fang.png"></image>
+    <text>住宿</text>
+  </view>
+  <view class="item">
+    <image src="/images/xue.png"></image>
+    <text>学习</text>
+  </view>
+  <view class="item">
+    <image src="/images/gong.png"></image>
+    <text>工作</text>
+  </view>
+  <view class="item">
+    <image src="/images/hun.png"></image>
+    <text>结婚</text>
+  </view>
+</view>

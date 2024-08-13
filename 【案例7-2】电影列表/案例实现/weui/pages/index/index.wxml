@@ -1,0 +1,27 @@
+<!--index.wxml-->
+<view class="page" data-weui-theme="{{ theme }}" data-weui-mode="{{ mode }}">
+  <view class="page__bd" style="height: 100%;">
+    <view class="weui-tab">
+      <!-- 标签栏 -->
+      <view class="weui-navbar">
+        <block wx:for="{{ tabs }}" wx:key="index">
+          <view aria-selected="{{ activeIndex == index ? true: false }}" id="{{ index }}" class="weui-navbar__item {{ activeIndex == index ? 'weui-bar__item_on' : '' }}" aria-role="tab" bindtap="tabClick">
+            {{ item }}
+          </view>
+        </block>
+      </view>
+      <!-- 正在热映 -->
+      <view id="panel1" aria-labelledby="tab1" class="weui-tab__panel" aria-role="tabpanel" hidden="{{ activeIndex != 0 }}">
+        <include src="tab1.wxml" />
+      </view>
+      <!-- 搜索 -->
+      <view id="panel2" aria-labelledby="tab2" class="weui-tab__panel" aria-role="tabpanel" hidden="{{ activeIndex != 1 }}">
+        <include src="tab2.wxml" />
+      </view>
+      <!-- 分类 -->
+      <view id="panel3" aria-labelledby="tab3" class="weui-tab__panel" aria-role="tabpanel" hidden="{{ activeIndex != 2 }}">
+        <include src="tab3.wxml" />
+      </view>
+    </view>
+  </view>
+</view>

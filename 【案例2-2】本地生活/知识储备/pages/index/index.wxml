@@ -1,0 +1,28 @@
+<!--index.wxml-->
+<swiper>
+  <swiper-item>1</swiper-item>
+  <swiper-item>2</swiper-item>
+  <swiper-item>3</swiper-item>
+</swiper>
+
+<swiper current="2" indicator-dots indicator-color="yellow" indicator-active-color="red" autoplay="true" interval="3000" circular="true">
+  <swiper-item style="background: lightblue">0</swiper-item>
+  <swiper-item style="background: lightcoral">1</swiper-item>
+  <swiper-item style="background: lightgrey">2</swiper-item>
+</swiper>
+
+<text>设置行内文本样式</text>
+
+<text user-select="true">微信小程序</text>
+
+<view class="demo1">
+  <view>1</view>
+  <view>2</view>
+  <view>3</view>
+</view>
+
+<view class="demo2">
+  <view>1</view>
+  <view>2</view>
+  <view>3</view>
+</view>

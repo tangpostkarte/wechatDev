@@ -1,0 +1,24 @@
+<view class="page__hd">
+  <view class="page__title">电影列表</view>
+</view>
+<view class="page__bd">
+  <view class="weui-panel weui-panel_access">
+    <view class="weui-panel__bd">
+      <navigator wx:for="{{ contents }}" wx:key="index" aria-labelledby="js_p1m1_bd" class="weui-media-box weui-media-box_appmsg" url="../test/test">
+        <view aria-hidden="true" class="weui-media-box__hd">
+          <image class="weui-media-box__thumb" src="{{ item.poster }}" />
+        </view>
+        <view aria-hidden="true" id="js_p1m1_bd" class="weui-media-box__bd">
+          <text class="weui-media-box__title">{{ item.title }}</text>
+          <view class="weui-media-box__desc">{{ item.article }}</view>
+        </view>
+      </navigator>
+    </view>
+    <view class="weui-panel__ft">
+      <navigator class="weui-cell weui-cell_active weui-cell_access weui-cell_link" url="../index/index">
+        <text class="weui-cell__bd">查看更多</text>
+        <text class="weui-cell__ft"></text>
+      </navigator>
+    </view>
+  </view>
+</view>

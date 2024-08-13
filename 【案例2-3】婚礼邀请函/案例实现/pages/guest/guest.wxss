@@ -1,0 +1,54 @@
+/* pages/guest/guest.wxss */
+/* 背景图片的样式 */
+.bg {
+  width: 100vw;
+  height: 100vh;
+}
+/* 内容区域外层容器的样式 */
+.content {
+  width: 80vw;
+  position: fixed;
+  left: 10vw;
+  bottom: 8vh;
+}
+/* 编写输入框的样式 */
+.content .input {
+  font-size: large;
+  border: 1rpx solid #ff4c91;
+  border-radius: 10rpx;
+  padding: 1.5vh 40rpx;
+  margin-bottom: 1.5vh;
+  color: #ff4c91;
+}
+/* 手机号码区域的样式 */
+.content .radio {
+  font-size: large;
+  margin-bottom: 1.5vh;
+  color: #ff4c91;
+  display: flex;
+}
+/* 需要的点心区域的样式 */
+.content .check {
+  font-size: large;
+  margin-bottom: 1.5vh;
+  color: #ff4c91;
+}
+.check checkbox-group {
+  margin-top: 1.5vh;
+  color: #ff4c91;
+}
+.check checkbox-group checkbox {
+  margin-left: 20rpx;
+}
+.check checkbox-group checkbox:nth-child(1) {
+  margin-left: 0;
+}
+/* 提交按钮的样式 */
+.content button {
+  font-size: large;
+  background: #ff4c91;
+  color: #fff;
+}
+.content .phcolor {
+  color: #ff4c91;
+}

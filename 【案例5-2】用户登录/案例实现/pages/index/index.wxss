@@ -1,0 +1,21 @@
+/**index.wxss**/
+.avatar-wrapper {
+  width: 160rpx;
+  height: 160rpx;
+  padding: 0;
+  background: none;
+}
+
+.avatar {
+  width: 160rpx;
+  height: 160rpx;
+  border-radius: 20rpx;
+}
+
+.nickname {
+  width: 80%;
+  height: 100rpx;
+  margin: 20px auto;
+  border: 1px solid #000000;
+  text-align: center;
+}

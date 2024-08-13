@@ -1,0 +1,34 @@
+<!--pages/form/form.wxml-->
+<view class="container">
+  <!-- 姓名区域 -->
+  <view>
+    <text>姓名：</text>
+    <input type="text" model:value="{{ name }}" />
+  </view>
+  <!-- 性别区域 -->
+  <view>
+    <text>性别：</text>
+    <radio-group bindchange="radioChange">
+      <label wx:for="{{ gender }}" wx:key="value">
+        <radio value="{{ item.value }}" checked="{{ item.checked }}" />
+        {{ item.name }}
+      </label>
+    </radio-group>
+  </view>
+  <!-- 专业技能区域 -->
+  <view>
+    <text>专业技能：</text>
+    <checkbox-group bindchange="checkboxChange">
+      <label wx:for="{{ skills }}" wx:key="value">
+        <checkbox value="{{ item.value }}" checked="{{ item.checked }}" />
+        {{ item.name }}
+      </label>
+    </checkbox-group>
+  </view>
+  <!-- 意见区域 -->
+  <view>
+    <text>您的意见：</text>
+    <textarea model:value="{{ opinion }}" />
+  </view>
+  <button type="primary" bindtap="submit">提交</button>
+</view>

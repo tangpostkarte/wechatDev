@@ -1,0 +1,16 @@
+<view>
+  <!-- 头像区域 -->
+  <view class="top">
+    <view class="user-img">
+      <image src="/images/avatar.png"></image>
+    </view>
+  </view>
+  <!-- 详细信息区域 -->
+  <view class="menu">
+    <view class="item">姓名：小丽</view>
+    <view class="item">年龄：20</view>
+    <view class="item">性别：女</view>
+    <view class="item">特长：绘画、书法</view>
+    <view class="item">爱好：编程</view>
+  </view>
+</view>

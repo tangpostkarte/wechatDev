@@ -1,0 +1,4 @@
+<!--index.wxml-->
+<mp-dialog title="微信小程序" show="{{ show }}" bindbuttontap="tapDialogButton" buttons="{{ buttons }}">
+  <view>好好学习，天天向上！！！</view>
+</mp-dialog>

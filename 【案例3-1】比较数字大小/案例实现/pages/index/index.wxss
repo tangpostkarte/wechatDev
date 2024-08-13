@@ -1,0 +1,20 @@
+/**index.wxss**/
+view {
+  margin: 50rpx;
+}
+
+input {
+  width: 600rpx;
+  margin-top: 20rpx;
+  border-bottom: 2rpx solid #ccc;
+}
+
+button {
+  margin: 50rpx;
+}
+
+button {
+  color: #fff;
+  background: #369;
+  letter-spacing: 12rpx;
+}

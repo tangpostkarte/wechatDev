@@ -1,0 +1,14 @@
+<!--index.wxml-->
+<view class="chat">
+  <!-- 消息列表 -->
+  <scroll-view scroll-y scroll-into-view="item_{{ lastId }}">
+    <view wx:for="{{ list }}" wx:key="id" class="chat-message chat-message-{{ item.role }}" id="item_{{ item.id }}">
+      <view class="chat-content"><view>{{ item.content }}</view></view>
+      <image class="chat-avatar" src="/images/{{ item.role }}.png"></image>
+    </view>
+  </scroll-view>
+</view>
+<view class="message">
+  <input type="text" bindinput="input" placeholder="请输入聊天内容..." value="{{ content }}" />
+  <button type="primary" bindtap="send" size="small">发送</button>
+</view>

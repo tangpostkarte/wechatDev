@@ -1,0 +1,237 @@
+/**index.wxss**/
+page {
+  display: flex;
+  flex-direction: column;
+  background: #17181a;
+  color: #ccc;
+  height: 100%;
+}
+
+.tab {
+  display: flex;
+}
+
+.tab-item {
+  flex: 1;
+  font-size: 10pt;
+  text-align: center;
+  line-height: 72rpx;
+  border-bottom: 6rpx solid #eee;
+}
+
+.content {
+  flex: 1;
+}
+
+.content>swiper {
+  height: 100%;
+}
+
+.player {
+  background: #222;
+  border-top: 1px solid #252525;
+  height: 112rpx;
+}
+
+.tab-item.active {
+  color: #c25b5b;
+  border-bottom-color: #c25b5b;
+}
+
+.content-info {
+  height: 100%;
+}
+
+/* ::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  color: transparent;
+} */
+
+/* 轮播图 */
+
+.content-info-slide {
+  height: 302rpx;
+  margin-bottom: 20px;
+}
+
+.content-info-slide image {
+  width: 100%;
+  height: 100%;
+}
+
+/* 功能按钮 */
+
+.content-info-portal {
+  display: flex;
+  margin-bottom: 15px;
+}
+
+.content-info-portal>view {
+  flex: 1;
+  font-size: 11pt;
+  text-align: center;
+}
+
+.content-info-portal image {
+  width: 120rpx;
+  height: 120rpx;
+  display: block;
+  margin: 20rpx auto;
+}
+
+/* 热门音乐 */
+
+.content-info-list {
+  font-size: 11pt;
+  margin-bottom: 20rpx;
+}
+
+.content-info-list>.list-title {
+  margin: 20rpx 35rpx;
+}
+
+.content-info-list>.list-inner {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 20rpx;
+}
+
+.content-info-list>.list-inner>.list-item {
+  flex: 1;
+}
+
+.content-info-list>.list-inner>.list-item>image {
+  display: block;
+  width: 200rpx;
+  height: 200rpx;
+  margin: 0 auto;
+  border-radius: 10rpx;
+  border: 1rpx solid #555;
+}
+
+.content-info-list>.list-inner>.list-item>view {
+  width: 200rpx;
+  margin: 10rpx auto;
+  font-size: 10pt;
+}
+
+/* 播放器 */
+
+.content-play {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  height: 100%;
+  text-align: center;
+}
+
+.content-play-info>view {
+  color: #888;
+  font-size: 11pt;
+}
+
+/* 底部播放器 */
+
+.player {
+  display: flex;
+  align-items: center;
+  background: #222;
+  border-top: 1px solid #252525;
+  height: 112rpx;
+}
+
+.player-cover {
+  width: 80rpx;
+  height: 80rpx;
+  margin-left: 15rpx;
+  border-radius: 8rpx;
+  border: 1px solid #333;
+}
+
+.player-info {
+  flex: 1;
+  font-size: 10pt;
+  line-height: 38rpx;
+  margin-left: 20rpx;
+  padding-bottom: 8rpx;
+}
+
+.player-info-singer {
+  color: #888;
+}
+
+.player-controls image {
+  width: 80rpx;
+  height: 80rpx;
+  margin-right: 15rpx;
+}
+
+/* 显示专辑页面样式 */
+
+.content-play-cover image {
+  animation: rotateImage 10s linear infinite;
+  width: 400rpx;
+  height: 400rpx;
+  border-radius: 50%;
+  border: 1px solid #333;
+}
+
+@keyframes rotateImage {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* 播放进度和时间 */
+
+.content-play-progress {
+  display: flex;
+  align-items: center;
+  margin: 0 35rpx;
+  font-size: 9pt;
+  text-align: center;
+}
+
+.content-play-progress>view {
+  flex: 1;
+}
+
+/* 播放列表 */
+
+.playlist-item {
+  display: flex;
+  align-items: center;
+  border-bottom: 1rpx solid #333;
+  height: 112rpx;
+}
+
+.playlist-cover {
+  width: 80rpx;
+  height: 80rpx;
+  margin-left: 15rpx;
+  border-radius: 8rpx;
+  border: 1px solid #333;
+}
+
+.playlist-info {
+  flex: 1;
+  font-size: 10pt;
+  line-height: 38rpx;
+  margin-left: 20rpx;
+  padding-bottom: 8rpx;
+}
+
+.playlist-info-singer {
+  color: #888;
+}
+
+.playlist-controls {
+  font-size: 10pt;
+  margin-right: 20rpx;
+  color: #c25b5b;
+}

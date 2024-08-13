@@ -1,0 +1,11 @@
+<!--index.wxml-->
+<scroll-view scroll-x="{{ true }}" scroll-y="{{ true }}" style="height: 200px;" bindscroll="scroll">
+  <view style="width: 200%; height: 400px; background-image: linear-gradient(to bottom right, red, yellow);"></view>
+</scroll-view>
+
+<slider bindchanging="sliderChanging" show-value="true" />
+
+<!-- index.wxml -->
+<include src="header.wxml"/>
+<view>body</view>
+<include src="footer.wxml"/>

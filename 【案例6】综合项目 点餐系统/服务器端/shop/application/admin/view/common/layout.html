@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/static/twitter-bootstrap/3.4.0/css/bootstrap.min.css" />
+  <link href="/static/font-awesome-4.2.0/css/font-awesome.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="/static/css/css-main.css" />
+  <script src="/static/jquery/1.12.4/jquery.min.js"></script>
+  <script src="/static/twitter-bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <script src="/static/js/common.js"></script>
+  <title>管理中心 - 点餐系统</title>
+</head>
+<body>
+  <nav class="navbar navbar-default navbar-static-top main-nav" role="navigation">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <div class="navbar-brand">点餐系统</div>
+    </div>
+    <ul class="nav navbar-right hidden-xs">
+      <li><a href="{:url('Index/password')}"><i class="fa fa-user fa-fw"></i>{$_admin.username}</a></li>
+      <li><a href="logout"><i class="fa fa-power-off fa-fw"></i>退出</a></li>
+    </ul>
+    <div class="collapse navbar-collapse navbar-default main-sidebar">
+      <ul class="nav">
+        <li><a href="{:url('Index/index')}" class="{if $_path==='Index/index'}active{/if}"><i class="fa fa-home fa-fw"></i>首页</a></li>
+        <li><a href="{:url('Order/index', ['is_pay' => 1, 'is_taken' => 0, '_menu' => 1])}" class="{if $_path==='Order/index' && isset($_GET['_menu'])}active{/if}"><i class="fa fa-flag fa-fw"></i>待发货</a></li>
+        <li><a href="{:url('Food/edit')}" class="{if $_path==='Food/edit'}active{/if}"><i class="fa fa-edit fa-fw"></i>编辑商品</a></li>
+        <li><a href="{:url('Food/index')}" class="{if $_path==='Food/index'}active{/if}"><i class="fa fa-list-alt fa-fw"></i>管理商品</a></li>
+        <li><a href="{:url('Category/index')}" class="{if $_path==='Category/index'}active{/if}"><i class="fa fa-list fa-fw"></i>分类</a></li>
+        <li><a href="{:url('Order/index')}" class="{if $_path==='Order/index' && !isset($_GET['_menu'])}active{/if}"><i class="fa fa-tasks fa-fw"></i>订单</a></li>
+        <li><a href="{:url('User/index')}" class="{if $_path==='User/index'}active{/if}"><i class="fa fa-comments fa-fw"></i>客户</a></li>
+        <li><a href="{:url('Index/setting')}" class="{if $_path==='Index/setting'}active{/if}"><i class="fa fa-cog fa-fw"></i>设置</a></li>
+        <li class="visible-xs"><a href="#"><i class="fa fa-user fa-fw"></i>{$_admin.username}</a></li>
+        <li class="visible-xs"><a href="logout"><i class="fa fa-power-off fa-fw"></i>退出</a></li>
+      </ul>
+    </div>
+  </nav>
+  <div class="main-content">{__CONTENT__}</div>
+</body>
+</html>

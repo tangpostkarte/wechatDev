@@ -1,0 +1,7 @@
+<!--index.wxml-->
+<button class="avatar-wrapper" open-type="chooseAvatar" bindchooseavatar="onChooseAvatar">
+  <image class="avatar" src="{{ avatarUrl }}"></image>
+</button>
+<input type="nickname" class="nickname" placeholder="请输入昵称" />
+
+<button bindtap="credit">获取用户的积分</button>

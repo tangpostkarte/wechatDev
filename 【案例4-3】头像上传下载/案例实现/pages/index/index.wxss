@@ -1,0 +1,17 @@
+/**index.wxss**/
+
+.imgbox{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+}
+.imgbox image {
+  width: 300rpx;
+  height: 300rpx;
+  border: 1rpx solid gray;
+}
+.imgbox button{
+  margin-top: 50rpx;
+}

@@ -1,0 +1,43 @@
+<!--index.wxml-->
+<view class="result">
+  <!-- 结果区域 -->
+  <view class="result-sub">{{ sub }}</view>
+  <view class="result-num">{{ num }}</view>
+</view>
+<view class="btns">
+  <!-- 按钮区域 -->
+  <!-- 按钮区域第1行按钮的结构 -->
+  <view>
+    <view hover-class="bg" hover-stay-time="50" bindtap="resetBtn">C</view>
+    <view hover-class="bg" hover-stay-time="50" bindtap="delBtn">DEL</view>
+    <view hover-class="bg" hover-stay-time="50" bindtap="negBtn">+/-</view>
+    <view hover-class="bg" hover-stay-time="50" bindtap="opBtn" data-val="÷">÷</view>
+  </view>
+  <!-- 按钮区域第2行按钮的结构 -->
+  <view>
+    <view hover-class="bg" hover-stay-time="50" bindtap="numBtn" data-val="7">7</view>
+    <view hover-class="bg" hover-stay-time="50" bindtap="numBtn" data-val="8">8</view>
+    <view hover-class="bg" hover-stay-time="50" bindtap="numBtn" data-val="9">9</view>
+    <view hover-class="bg" hover-stay-time="50" bindtap="opBtn" data-val="×">×</view>
+  </view>
+  <!-- 按钮区域第3行按钮的结构 -->
+  <view>
+    <view hover-class="bg" hover-stay-time="50" bindtap="numBtn" data-val="4">4</view>
+    <view hover-class="bg" hover-stay-time="50" bindtap="numBtn" data-val="5">5</view>
+    <view hover-class="bg" hover-stay-time="50" bindtap="numBtn" data-val="6">6</view>
+    <view hover-class="bg" hover-stay-time="50" bindtap="opBtn" data-val="－">－</view>
+  </view>
+  <!-- 按钮区域第4行按钮的结构 -->
+  <view>
+    <view hover-class="bg" hover-stay-time="50" bindtap="numBtn" data-val="1">1</view>
+    <view hover-class="bg" hover-stay-time="50" bindtap="numBtn" data-val="2">2</view>
+    <view hover-class="bg" hover-stay-time="50" bindtap="numBtn" data-val="3">3</view>
+    <view hover-class="bg" hover-stay-time="50" bindtap="opBtn" data-val="＋">＋</view>
+  </view>
+  <!-- 按钮区域第5行按钮的结构 -->
+  <view>
+    <view hover-class="bg" hover-stay-time="50" bindtap="numBtn" data-val="0">0</view>
+    <view hover-class="bg" hover-stay-time="50" bindtap="dotBtn">.</view>
+    <view hover-class="bg" hover-stay-time="50" bindtap="execBtn">=</view>
+  </view>
+</view>

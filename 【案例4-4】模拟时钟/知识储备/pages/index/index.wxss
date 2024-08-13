@@ -1,0 +1,8 @@
+/**index.wxss**/
+#myCanvas {
+  display: block;
+  width: 300px;
+  height: 150px;
+  position: relative;
+  border: 1px solid red;
+}

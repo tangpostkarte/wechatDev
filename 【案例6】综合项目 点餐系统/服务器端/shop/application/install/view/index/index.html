@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <title>安装向导</title>
+  <link href="/static/twitter-bootstrap/3.4.0/css/bootstrap.min.css" rel="stylesheet">
+  <link href="/static/font-awesome-4.2.0/css/font-awesome.min.css" rel="stylesheet">
+  <link href="/static/css/css-main.css" rel=stylesheet>
+  <script src="/static/jquery/1.12.4/jquery.min.js"></script>
+  <script src="/static/twitter-bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <script src="/static/js/common.js"></script>
+</head>
+<body class="install">
+  <div class="container">
+    <h1>点餐系统 安装向导</h1>
+    {if isset($error)}
+    <div class="alert alert-danger alert-dismissible fade in" role="alert">
+      <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></button>
+      <strong>安装失败！</strong><p>{$error}</p>
+    </div>
+    {/if}
+    <form method="post">
+      <div class="form-group form-inline">
+        <ul>
+          <li><b>数据库配置</b></li>
+          <li>
+            <input type="text" maxlength="200" style="width:232px;" class="form-control" name="hostname" value="127.0.0.1" required />
+            <label>数据库地址</label>
+          </li>
+          <li>
+            <input type="text" maxlength="10" style="width:232px;" class="form-control" name="hostport" value="3306" />
+            <label>数据库端口号</label>
+          </li>
+          <li>
+            <input type="text" maxlength="200" style="width:232px;" class="form-control" name="username" value="root" required />
+            <label>数据库用户名</label>
+          </li>
+          <li>
+            <input type="text" maxlength="200" style="width:232px;" class="form-control" name="password" value="" placeholder="空密码" />
+            <label>数据库密码</label>
+          </li>
+          <li>
+            <input type="text" maxlength="200" style="width:232px;" class="form-control" name="database" value="wxshop" required />
+            <label>数据库名</label>
+          </li>
+          <li>
+            <input type="text" maxlength="200" style="width:232px;" class="form-control" name="prefix" value="wxshop_" />
+            <label>数据库表前缀</label>
+          </li>
+          <li><b>管理员配置</b></li>
+          <li>
+            <input type="text" maxlength="32" style="width:232px;" class="form-control" name="admin_username" value="admin" required />
+            <label>管理员用户名</label>
+          </li>
+          <li>
+            <input type="text" maxlength="200" style="width:232px;" class="form-control" name="admin_password" value="123456" id="pwd1" />
+            <label class="control-label">管理员密码</label>
+          </li>
+          <li>
+            <input type="text" maxlength="200" style="width:232px;" class="form-control" value="123456" id="pwd2" />
+            <label class="control-label">再次输入管理员密码</label>
+          </li>
+          <li><input type="submit" class="btn btn-primary" value="立即安装" /></li>
+        </ul>
+      </div>
+    </form>
+  </div>
+  <script>$("[data-toggle='tooltip']").tooltip();
+    $('form').submit(function() {
+      if ($('#pwd1').val() !== $('#pwd2').val()) {
+        $('#pwd1').parents('li').addClass('has-error').popover({placement:'top',content:'两次输入密码不一致'}).popover('show');
+        $('#pwd2').parents('li').addClass('has-error');
+        return false;
+      }
+    });
+  </script>
+</body>
+</html>

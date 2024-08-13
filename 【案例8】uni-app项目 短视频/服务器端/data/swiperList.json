@@ -1,0 +1,23 @@
+{
+    "code": 0,
+    "data": {
+      "swiperList": [
+        {
+          "link": "",
+          "imgSrc": "http://127.0.0.1:3000/static/swiper/1.png"
+        },
+        {
+          "link": "",
+          "imgSrc": "http://127.0.0.1:3000/static/swiper/2.jpg"
+        },
+        {
+          "link": "",
+          "imgSrc": "http://127.0.0.1:3000/static/swiper/3.jpg"
+        },
+        {
+          "link": "",
+          "imgSrc": "http://127.0.0.1:3000/static/swiper/4.png"
+        }
+      ]
+    }
+  }

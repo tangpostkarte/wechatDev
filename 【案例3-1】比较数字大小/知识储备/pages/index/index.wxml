@@ -1,0 +1,26 @@
+<!--index.wxml-->
+<view>{{ message }}</view>
+
+<button bindtap="compare">比较</button>
+
+<view bindtap="viewtap" id="outer">
+  outer
+  <view id="inner">
+      inner
+  </view>
+</view>
+
+<view bindtap="changeText">{{ message }}</view>
+
+<view wx:if="{{ condition }}">True</view>
+
+<view wx:if="{{ count < 1 }}">0</view>
+<view wx:elif="{{ count == 1 }}">1</view>
+<view wx:else>2</view>
+
+<block wx:if="{{ true }}">
+  <view>view1</view>
+  <view>view2</view>
+</block>
+
+<text hidden="{{ hidden }}">hidden为true时不显示</text>

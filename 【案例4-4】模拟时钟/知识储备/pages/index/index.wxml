@@ -1,0 +1,3 @@
+<!--index.wxml-->
+<canvas id="myCanvas" type="2d"></canvas>
+<canvas id="draw" type="2d"></canvas>

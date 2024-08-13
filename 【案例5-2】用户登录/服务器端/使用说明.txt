@@ -1,0 +1,13 @@
+
+1. 准备工作
+安装Node.js
+启动命令行，切换工作目录到当前目录。
+
+2. 打开index.js，找到如下代码，填写你的 appid 和 secret。
+const wx = {
+  appid: '',
+  secret: ''
+}
+
+3. 执行如下命令，启动服务器
+node index.js

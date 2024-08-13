@@ -1,0 +1,25 @@
+{layout name="common/layout" /}
+<div class="main-category">
+  <div class="main-title">
+    <h2>编辑分类</h2>
+  </div>
+  {include file="common/alert" /}
+  <div class="main-section">
+    <form method="post">
+      <ul class="form-group form-inline">
+        <li>
+          <input type="text" class="form-control" maxlength="5" style="width:50px;" name="sort" value="{$category_sort}">
+          <label>序号</label>
+        </li>
+        <li>
+          <input type="text" class="form-control" name="name" value="{$category_name}" required>
+          <label>名称</label>
+        </li>
+        <li>
+          <input type="submit" value="保存分类" class="btn btn-primary">{:token()}
+          <a href="{:url('Category/index')}" class="btn btn-default">返回列表</a>
+        </li>
+      </ul>
+    </form>
+  </div>
+</div>

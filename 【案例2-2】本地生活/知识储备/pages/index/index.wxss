@@ -1,0 +1,11 @@
+/**index.wxss**/
+.demo1 {
+  display: flex;
+  flex-direction: column;
+}
+
+.demo2 {
+  background-color: lightgrey;
+  display: flex;
+  justify-content: space-between;
+}

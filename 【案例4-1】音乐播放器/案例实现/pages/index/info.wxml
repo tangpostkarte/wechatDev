@@ -1,0 +1,54 @@
+<swiper class="content-info-slide" indicator-color="rgba(255,255,255,.5)" indicator-active-color="#fff" indicator-dots circular autoplay>
+  <swiper-item>
+    <image src="/images/banner.jpg" />
+  </swiper-item>
+  <swiper-item>
+    <image src="/images/banner.jpg" />
+  </swiper-item>
+  <swiper-item>
+    <image src="/images/banner.jpg" />
+  </swiper-item>
+</swiper>
+<view class="content-info-portal">
+  <view>
+    <image src="/images/04.png" />
+    <text>私人FM</text>
+  </view>
+  <view>
+    <image src="/images/05.png" />
+    <text>每日歌曲推荐</text>
+  </view>
+  <view>
+    <image src="/images/06.png" />
+    <text>云音乐新歌榜</text>
+  </view>
+</view>
+<view class="content-info-list">
+  <view class="list-title">推荐歌曲</view>
+  <view class="list-inner">
+    <view class="list-item">
+      <image src="/images/cover.jpg" />
+      <view>山水之间</view>
+    </view>
+    <view class="list-item">
+      <image src="/images/cover.jpg" />
+      <view>惊鸿一面</view>
+    </view>
+    <view class="list-item">
+      <image src="/images/cover.jpg" />
+      <view>稻香</view>
+    </view>
+    <view class="list-item">
+      <image src="/images/cover.jpg" />
+      <view>如果当时</view>
+    </view>
+    <view class="list-item">
+      <image src="/images/cover.jpg" />
+      <view>清明雨上</view>
+    </view>
+    <view class="list-item">
+      <image src="/images/cover.jpg" />
+      <view>有何不可</view>
+    </view>
+  </view>
+</view>

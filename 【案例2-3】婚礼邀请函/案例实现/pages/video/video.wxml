@@ -1,0 +1,16 @@
+<!--pages/video/video.wxml-->
+<view class="video">
+  <view class="video-title">标题：海边随拍</view>
+  <view class="video-time">拍摄日期：00:15:00</view>
+  <video src="http://localhost:3000/01.mp4" objectFit="fill"></video>
+</view>
+<view class="video">
+  <view class="video-title">标题：勿忘初心</view>
+  <view class="video-time">拍摄日期：00:15:00</view>
+  <video src="http://localhost:3000/02.mp4" objectFit="fill"></video>
+</view>
+<view class="video">
+  <view class="video-title">标题：十年之约</view>
+  <view class="video-time">拍摄日期：00:15:00</view>
+  <video src="http://localhost:3000/03.mp4" objectFit="fill"></video>
+</view>

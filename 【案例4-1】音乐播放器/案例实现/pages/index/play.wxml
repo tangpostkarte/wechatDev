@@ -1,0 +1,19 @@
+<view class="content-play">
+  <!-- 音乐信息 -->
+  <view class="content-play-info">
+    <text>{{ play.title }}</text>
+    <view>—— {{ play.singer }} ——</view>
+  </view>
+  <!-- 专辑封面 -->
+  <view class="content-play-cover">
+    <image src="{{ play.coverImgUrl }}" style="animation-play-state:{{ state }}" />
+  </view>
+  <!-- 播放进度和时间 -->
+  <view class="content-play-progress">
+    <text>{{ play.currentTime }}</text>
+    <view>
+      <slider bindchanging="sliderChanging" bindchange="sliderChange" activeColor="#d33a31" block-size="12" backgroundColor="#dadada" value="{{ play.percent }}" />
+    </view>
+    <text>{{ play.duration }}</text>
+  </view>
+</view>

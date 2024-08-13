@@ -1,0 +1,6 @@
+<!--index.wxml-->
+<view bindtap="demo" data-name="xiaochengxu" data-age="6">
+获取姓名和年龄
+</view>
+<view>姓名：{{ name }}</view>
+<view>年龄：{{ age }}</view>

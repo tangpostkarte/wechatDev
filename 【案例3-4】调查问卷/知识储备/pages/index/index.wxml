@@ -1,0 +1,4 @@
+<!--index.wxml-->
+<input value="{{ value }}" bindinput="test" />
+
+<input model:value="{{ value }}" bindinput="test" />

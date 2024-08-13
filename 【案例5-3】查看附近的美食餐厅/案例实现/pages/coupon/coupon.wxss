@@ -1,0 +1,15 @@
+/* pages/coupon/coupon.wxss */
+
+page {
+  background-color: #f3f3f3;
+}
+
+.coupon {
+  width: 674rpx;
+  margin: 20rpx auto;
+}
+
+.coupon image {
+  width: 674rpx;
+  height: 196rpx;
+}

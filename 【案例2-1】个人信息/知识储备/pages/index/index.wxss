@@ -1,0 +1,7 @@
+/**index.wxss**/
+@import "/page.wxss";
+
+.bold {
+  font-weight: bold;
+}
+

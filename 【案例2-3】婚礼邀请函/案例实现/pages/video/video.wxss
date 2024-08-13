@@ -1,0 +1,24 @@
+/* pages/video/video.wxss */
+/* “美好时光”页面中的3个外层view组件的样式 */
+.video {
+  box-shadow: 0 8rpx 17rpx 0 rgba(7, 17, 27, 0.1);
+  margin: 10rpx 25rpx;
+  margin-bottom: 30rpx;
+  padding: 20rpx;
+  border-radius: 10rpx;
+  background: #fff;
+}
+/* 标题和拍摄日期区域的样式 */
+.video-title {
+  font-size: 35rpx;
+  color: #333;
+}
+.video-time {
+  font-size: 26rpx;
+  color: #979797;
+}
+/* 视频区域的样式 */
+.video video {
+  width: 100%;
+  margin-top: 20rpx;
+}

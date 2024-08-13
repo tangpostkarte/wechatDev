@@ -1,0 +1,83 @@
+/**index.wxss**/
+/* 背景图片的样式 */
+.bg {
+  width: 100vw;
+  height: 100vh;
+}
+/* 内容区域外层容器的样式 */
+.content {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+/* 顶部图片区域的样式 */
+.content-gif {
+  width: 19vh;
+  height: 18.6vh;
+  margin-bottom: 1.5vh;
+}
+/* 标题区域的样式 */
+.content-title {
+  font-size: 5vh;
+  color: #ff4c91;
+  text-align: center;
+  margin-bottom: 2.5vh;
+}
+/* 头像区域的样式 */
+.content-avatar image {
+  width: 24vh;
+  height: 24vh;
+  border: 3px solid #ff4c91;
+  border-radius: 50%;
+}
+/* 新郎和新娘的名字区域的样式 */
+.content-info {
+  width: 45vw;
+  text-align: center;
+  margin-top: 4vh;
+  display: flex;
+  align-items: center;
+}
+/* 新郎和新娘的名字区域中姓名区域的样式 */
+.content-name {
+  color: #ff4c91;
+  font-size: 2.7vh;
+  line-height: 4.5vh;
+  font-weight: bold;
+  position: relative;
+}
+/* 姓名区域中电话图片的样式 */
+.content-name > image {
+  width: 2.6vh;
+  height: 2.6vh;
+  border: 1px solid #ff4c91;
+  border-radius: 50%;
+  position: absolute;
+  top: -1vh;
+  right: -3.6vh;
+}
+/* 新郎新娘名字区域中“喜”字图片的样式 */
+.content-wedding {
+  flex: 1;
+}
+.content-wedding > image {
+  width: 5.5vh;
+  height: 5.5vh;
+  margin-left: 20rpx;
+}
+/* 婚礼信息区域的样式 */
+.content-address {
+  margin-top: 5vh;
+  color: #ec5f89;
+  font-size: 2.5vh;
+  font-weight: bold;
+  text-align: center;
+  line-height: 4.5vh;
+}
+.content-address view:first-child {
+  font-size: 3vh;
+  padding-bottom: 2vh;
+}
